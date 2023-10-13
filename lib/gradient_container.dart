@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/styled_text.dart';
+
+const startalignment=Alignment.topLeft; // this is known during compiletime
+// final startalignment=somefunction(); //use it when the value is not known before compilation
+// Alignment? test; // creating Alignment type object which can be null or an Alignment object
+const endalignment=Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
 
@@ -12,14 +18,11 @@ class GradientContainer extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
             colors: [Colors.amber, Colors.red],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight),
+            begin: startalignment,
+            end: endalignment),
       ),
       child: const Center(
-        child: Text(
-          "Hello World!",
-          style: TextStyle(color: Colors.white, fontSize: 28),
-        ),
+        child: StyledText(),
       ),
     );
   }
