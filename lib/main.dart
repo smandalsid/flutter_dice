@@ -7,7 +7,7 @@ void main() {
       home: Scaffold(
         // backgroundColor: Colors.amber,
         
-        body: GradientContainer(Colors.amber, Colors.blue),
+        body: GradientContainer(Colors.amber, Colors.red),
       ),
     ),
   );
